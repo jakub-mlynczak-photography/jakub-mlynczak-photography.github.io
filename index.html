@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="light">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<meta name="theme-color" content="#d3d3d3">
+	<title>Jakub Młyńczak PHOTOGRAPHY</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		const theme = sessionStorage.getItem("theme");
+		if (theme) {
+    	document.documentElement.style.colorScheme = theme;
+		}
+	</script>
+</head>
+<body>
+		<header id="titlebar">
+			<div><img id="logo" src="img/logo.png" alt="logo placeholder"></div>
+			<div id="title"><b>Jakub Młyńczak</b> Photography</div>
+		</header>
+		<nav id="navbar">
+			<ul>
+  				<li><a href="prusy.html" target="_self">Mazury i Warmia</a></li>
+  				<li><a href="warszawa.html" target="_self">Warszawa</a></li>
+				<li><a href="baltyk.html" target="_self">Bałtyk</a></li>
+  				<li><a href="torun.html" target="_self">Toruń</a></li>
+  				<li><a href="polska.html" target="_self">Polska</a></li>
+				<li><a href="index.html" target="_self">O mnie</a></li>
+			</ul>
+		</nav>
+	<br>
+	<main>
+		<section>
+			<br>
+			<div class="container"><!-- Container for the image gallery -->
+				<!-- Full-width images with number text -->
+				<div class="mySlides">
+					<div class="numbertext">1 / 6</div>
+					<img src="photo/Bałtyk/20250104_145846 - Hel.jpg">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">2 / 6</div>
+					<img src="photo/Prusy/DSC01630 - Tylkowo.jpg">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">3 / 6</div>
+					<img src="photo/Toruń/20251122_151443.jpg">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">4 / 6</div>
+					<img src="photo/Warszawa/20250213_165644_1.jpg">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">5 / 6</div>
+					<img src="photo/Polska/20220810_133841_5 - Szklarska.jpg">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">6 / 6</div>
+					<img src="photo/Polska/20250502_134422_1 - Kraków.jpg">
+				</div>
+				<!-- Next and previous buttons -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				<!-- Image text -->
+			</div>
+			<div class="section_column_photo">
+				<div class="column_p">
+					<h2>Damy jeszcze nagłówek</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="column_img">
+					<img src="photo/Prusy/IMG_2743_poprawiony_1 - Tylkowo.jpg" alt="Vistula sunset">
+				</div>
+			</div>
+			<br>
+			<div class="section_columns">
+				<div class="column_p">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="column_p">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. A TO PSIKUS, TA JEST KRÓTSZA.</p>
+				</div>
+			</div>
+		</section>
+		<br>
+	</main>
+	<div style="clear: both;"></div>
+	<footer>
+		<table  style="
+  			border-collapse: collapse;
+  			width: 100%;
+  			border: 0px solid #ddd;
+			">
+			<tr>
+				<td style="
+					text-align: center;
+  					width: 25%;
+  					border: 0px solid lightgray;">
+					<a href="mailto:jakub.mlynczak@gmail.com"><button>Skontaktuj się</button></a>
+				</td>
+				<td style="
+					text-align: center;
+  					width: 25%;
+  					border: 0px solid lightgray;">
+					<button  id="darkmode-toggle" role="button" aria-pressed="false" onclick="darkmode()">tryb ciemny</button>
+				</td>
+			</tr>
+		</table>
+		<p>© 2025-2026 Jakub Młyńczak. All rights reserved. </p>
+	</footer>
+<script type="text/javascript" src="darkmode.js"></script>
+<script type="text/javascript" src="modal.js"></script>
+<script type="text/javascript" src="slideshow.js"></script>
+</body>
+</html>

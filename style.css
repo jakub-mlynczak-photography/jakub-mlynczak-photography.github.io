@@ -1,0 +1,531 @@
+:root {
+	color-scheme: light dark;
+	--canvas_bg: light-dark(#fbfbfb, #5d5d5d);
+	--scrollbar_bg: light-dark(#999999, #5d5d5d);
+	--title_bg: light-dark(#fbfbfb, #353535);
+	--title_color: light-dark(#5e5e5e, #c0c0c0);
+	--navbar_bg: light-dark(#efefef, #5d5d5d);
+	--navbar_color: light-dark(#2f2f2f, #fbfbfb);
+	--main_bg: light-dark(#fbfbfb, #5d5d5d);
+	--section_color: light-dark(#353535, #f8f8f8);
+	--footer_bg: light-dark(#ececec, #4b4b4b);
+	--footer_color: light-dark(#2f2f2f, #fbfbfb);
+	--button_normal_bg: light-dark(#ffffff, #585858);
+	--button_normal_color: light-dark(#474747, #d2d2d2);
+	--button_hover_bg: light-dark(#222222, #a0a0a0);
+	--button_hover_color: light-dark(#f0f0f0, #2f2f2f);	
+	--border_normal_color: light-dark(#aaaaaa, #a0a0a0);
+	--border_hover_color: light-dark(#222222, #a0a0a0);
+	--border_lighter_color: light-dark(#aaaaaa, #5d5d5d);	
+	--navbutton_hover_bg: light-dark(#2e2e2e, #a0a0a0);
+	--navbutton_hover_color: light-dark(#fbfbfb, #2f2f2f);
+	--photo_bg: light-dark(#ffffff, #686868);
+	--border_photo_color: light-dark(#c8c8c8, #4c4c4c);
+}
+
+html{
+	color-scheme: light dark;
+}
+
+*{
+    box-sizing: border-box;
+    scrollbar-color: var(--scrollbar_bg);
+  	scrollbar-width: thin;
+}
+
+body{
+  	background-color: var(--canvas_bg);
+  	color: light-dark(#0e0d09, grey);
+    margin: 0%;
+    margin-bottom: 0%;
+    font-family: verdana; 
+	border-style: solid;
+	border-color: light-dark(darkgrey, #4f4f51);
+	border-width: 0px;
+}
+
+#top{
+	text-transform: uppercase; 
+}
+
+#titlebar{
+	background-color: var(--title_bg);
+	color: var(--title_color);
+	text-align: right;
+	padding: 10px 220px 10px 220px;
+	text-transform: uppercase; 
+	font-size: 36px; 
+	border-style: solid;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+  	height: 100px;
+	margin: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#logo{
+	height: 75px;
+	object-fit: contain;
+	display: block;
+	padding-top: 10px;
+}
+
+#navbar{
+	position: sticky;
+  	top: 0;
+	text-transform: uppercase; 
+	font-size: 12px; 
+	padding-left: 115px;
+  	width: 100%;
+  	background-color: var(--navbar_bg);
+	z-index: 998;
+}
+
+#navbar > ul{
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0px 0px 0px 90px;
+  	background-color: var(--navbar_bg);
+  	display: flex;
+}
+
+ul li{
+  	float: left;
+}
+
+ul li a{
+  	display: block;
+  	color: var(--navbar_color);
+  	text-align: center;
+  	padding: 24px 20px;
+  	text-decoration: none;
+  	transition-duration: 0.5s;
+}
+
+ul li a:hover{
+  	background-color: var(--navbutton_hover_bg);
+	color: var(--navbutton_hover_color);
+}
+
+main{
+	margin-left: 10%;
+    margin-right: 10%;
+}
+
+section{
+  	background-color: var(--main_bg);
+	color: var(--section_color);
+	font-weight:100;
+	font-size: 14px;
+	width: 100%;
+	float: none;
+	padding-left: 70px;
+	padding-right: 70px;
+	text-align: justify;
+	height: 100%;
+}
+
+/*początek dodanego*/
+
+h1{
+ 	font-family: Garamond;
+}
+
+h2{
+ 	font-family: Garamond;
+}
+
+h3{
+ 	font-family: Garamond;
+}
+
+h4{
+ 	font-family: Garamond;
+}
+
+.section-header{
+	text-align: center;
+	width: 100%;
+}
+
+.section_columns{
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.section_column_photo{
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+.column_p{
+	flex: 1;
+  	margin: 0;
+}
+
+.column_img{
+	flex: 2;
+}
+
+.column_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+input{	
+	background-color: var(--main_bg);
+  	color: light-dark(#0e0d09, lightgrey);
+	padding: 10px 20px 12px 20px;
+	border-style: solid;
+	border-color: #dab45b;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-radius: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+	margin: auto;
+  	position: relative;
+  	width: 1000px;
+	height: 600px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 1000px;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/*koniec dodanego*/ /*SIATKA!!*/
+
+.div_grid{
+	display: grid;
+  	grid-template-columns: repeat(auto-fit, 20%);
+	grid-template-rows: repeat(auto-fit, 190px);
+	justify-content: space-evenly;
+	/*padding: 5px;*/
+  	/*grid: 150px / auto auto auto;*/
+  	gap: 30px;
+  	background-color: var(--main_bg);
+  	padding: 2px;
+}
+
+.div_grid > div{
+	background-color: var(--photo_bg);
+	/*outline-color: light-dark(#f1f1f1, grey);
+	outline-width: 10px;
+	outline-style: solid;*/
+	border-style: solid;
+	border: 1px;
+	border-radius: 3px;
+	border-color: transparent;
+	box-shadow: 0 0 5px var(--border_photo_color);
+	/*padding: 7px;*/
+  	padding-top: 28px;
+	font-family: Arial, Helvetica, sans-serif;
+  	font-size: 14px;
+  	text-align: center;
+	/*overflow: auto;*/
+	display: inline-block;
+	min-width: 	180px;
+}
+
+.grid_photo{
+	width: 160px;
+  	height: 120px;
+  	display: inline-flex;
+  	align-items: center;
+  	justify-content: center;
+  	overflow: hidden;
+  	text-decoration: none;
+}
+
+.grid_photo img{
+  	width: 100%;
+  	height: 100%;
+  	object-fit: contain;
+	display: block;
+}
+
+.info{
+	font-weight: lighter;
+	color: light-dark(#5a5a5a, #cccccc);
+}
+
+/*Koniec siatki */
+
+footer{
+  	background-color: var(--footer_bg);
+  	color: var(--footer_color);
+	clear: both;
+	margin-top: 25px;
+	display: block;
+	clear: both;
+	text-align: center;
+	padding: 25px;
+	border-style: solid;
+	border-color: var(--border_lighter_color);
+	border-width: 1px 0 1px 0;
+	box-shadow: inset 1px 18px 12px -15px rgba(0, 0, 0, 0.20);
+}
+
+button{	
+  	background-color: var(--button_normal_bg);
+  	color: var(--button_normal_color);
+	border-color: var(--border_normal_color);
+	padding: 15px 20px 14px 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0px;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition-duration: 0.5s;
+}
+
+button:hover{	
+  	background-color: var(--button_hover_bg);
+  	color: var(--button_hover_color);
+	border-color: var(--border_hover_color);
+}
+/*
+button:active{	
+	background-color: light-dark(#ffffff, #5d5d5d);
+	border-color: light-dark(papayawhip, orchid);
+	color: #a58123;
+}
+
+button:focus{	
+	background-color: light-dark(#ffffff, #5d5d5d);
+	border-color: light-dark(papayawhip, orchid);
+
+	color: #83661c;
+}
+*/
+li::marker {
+  	color: grey;
+	font-size: 28px;
+}
+
+/*
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+.modal-img {
+  border-radius: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-img:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  	margin: auto;
+  	display: block;
+  	width: 90%;
+	height: 90%;
+  	max-width: 768px;
+  	object-fit: contain;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption2 {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 768px;
+  text-align: center;
+  color: #ccc;
+  padding: 20px 0;
+  height: 50px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption2 {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  	position: absolute;
+  	top: 15px;
+  	right: 35px;
+  	color: #f1f1f1;
+  	font-size: 40px;
+  	font-weight: bold;
+  	transition: 0.3s;
+	padding: 10px 0;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+/* koniec modalu */
+
+@media screen and (max-width:1400px){
+    }  
+@media screen and (max-width:1000px){
+	}    
+@media screen and (max-width:900px){
+	}
+@media screen and (max-width:800px){
+    }
+@media screen and (max-width:650px){
+    }
+@media screen and (max-width:400px){
+    }
+
+@media screen and (max-width:600px){
+    aside, section, article{
+        width: 100%;}
+    input{	
+	padding: 3px 8px 6px 8px;
+	font-weight: normal;
+	text-transform: lowercase;
+	}
+}
+
+.dark-mode body{
+	background-color: grey;
+	color: lightgrey;
+}
+
+.dark-mode section{
+		background-color: grey;
+	color: lightgrey;
+}
